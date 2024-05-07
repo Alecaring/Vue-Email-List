@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--! cdn vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--! custom css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+<!--* ---------------------------------------------------------- -->
+<div id="app">
+    
+    
+
+    <main>
+        <div class="header_title_main">
+            <h1>Smart E-mail Generator</h1>
+        </div>
+        <div>
+            
+        </div>
+        <div>
+
+            <button @click="generateEmail">cliccca</button>
+            
+
+            <ul v-if="email.length === 10" class="ul">
+                <li v-for="item in email" :key="item" class="list">{{ item }} </li>
+            </ul>
+            <div v-else>
+                <div class="loader"></div>
+                <span>attendi</span>
+            </div>
+
+
+
+        </div>
+    </main>
+    
+
+    </div>
+<!--* ----------------------------------------------------------- -->
+
+    <!--! cdn axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--! custom js -->
+    <script src="./js/vue.js"></script>
+</body>
+</html>
